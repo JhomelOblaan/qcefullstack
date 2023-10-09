@@ -8,8 +8,8 @@
             <a href="/commitment" class="font-bold px-3 py-3 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">QCE FORM</a>
             </nav>-->
 
-        <p class="font-bold text-lg">QCE FACULTY EVALUATION</p>
-        <p class="text-sm text-slate-500">A.Y. 2022-2023 2nd Semester</p>
+        <p class="font-bold text-lg mt-1">QCE FACULTY EVALUATION</p>
+        <p class="text-sm text-slate-500 mt-1">A.Y. 2022-2023 2nd Semester</p>
         </div>
         <div class="flex mr-4 z-index-1">
             <select class=" rouded-lg">
@@ -18,7 +18,6 @@
                 <option>Profile</option>
                 <option>Logout</option>
             </select>
-            <img src="../../assets/pix/Profile.png" alt="" width="58" >
         </div>
   </div>
   <div class="hidden">

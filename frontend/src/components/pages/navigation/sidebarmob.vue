@@ -179,8 +179,8 @@
         >
           <div class="profile-details">
             <img
-              v-if="profileImg"
-              :src="profileImg"
+              v-if="user_image"
+              :src="user_image"
               alt="profileImg"
             >
             <i
@@ -201,6 +201,7 @@
             class="bx bx-log-out"
             id="log_out"
             @click.stop="$emit('button-exit-clicked')"
+            @click="logout"
           />
         </div>
       </div>
@@ -372,6 +373,7 @@
           isAdmin:  false,
           user_name:  "aaaaa",
           user_role:  "aaaaa",
+          user_image:'',
         }
       },
       mounted() {
@@ -446,6 +448,7 @@
             this.isLoggedIAASManager = isIAASManager
           
             this.user_name = user.firstname;
+            this.user_image = user.picture
             this.user_role = userrole;
             if( userrole.includes("Manager")){
               this.isEvaluator = false;
@@ -457,6 +460,10 @@
 
 
           }
+        },
+        logout(){
+             localStorage.clear();
+             this.$router.push({path:'/login'})
         },
       },
     }

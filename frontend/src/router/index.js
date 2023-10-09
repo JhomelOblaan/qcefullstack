@@ -61,262 +61,310 @@ const routes =[
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: Home,
+        meta: {requiresLogin: true},
     },
     {
         path: '/nav',
         name: 'Nav',
-        component: Nav
+        component: Nav,
+        meta: {requiresLogin: true},
     },
     {
         path: '/response',
         name: 'Response',
-        component: Response
+        component: Response,
+        meta: {requiresLogin: true},
     },
     {
         path: '/response_form',
         name: 'ResponseForm',
-        component: ResponseForm
+        component: ResponseForm,
+        meta: {requiresLogin: true},
     },
     {
         path: '/qceevaluation',
         name: 'Evaluate',
-        component: Evaluation
+        component: Evaluation,
+        meta: {requiresLogin: true},
     },
     {
         path: '/commitment',
         name: 'Commitment',
-        component: Commitment
+        component: Commitment,
+        meta: {requiresLogin: true},
     },
     {
         path: '/commitmentq2',
         name: 'Commitmentq2',
-        component: Commitmentq2
+        component: Commitmentq2,
+        meta: {requiresLogin: true},
     },
     {
         path: '/commitmentq3',
         name: 'Commitmentq3',
-        component: Commitmentq3
+        component: Commitmentq3,
+        meta: {requiresLogin: true},
     },
     {
         path: '/commitmentq4',
         name: 'Commitmentq4',
-        component: Commitmentq4
+        component: Commitmentq4,
+        meta: {requiresLogin: true},
     },
     {
         path: '/commitmentq5',
         name: 'Commitmentq5',
-        component: Commitmentq5
+        component: Commitmentq5,
+        meta: {requiresLogin: true},
     },
     {
         path: '/knowledge',
         name: 'Knowledge',
-        component: Knowledge
+        component: Knowledge,
+        meta: {requiresLogin: true},
     },
     {
         path: '/knowledgeq2',
         name: 'Knowledgeq2',
-        component: Knowledgeq2
+        component: Knowledgeq2,
+        meta: {requiresLogin: true},
     },
     {
         path: '/knowledgeq3',
         name: 'Knowledgeq3',
-        component: Knowledgeq3
+        component: Knowledgeq3,
+        meta: {requiresLogin: true},
     },
     {
         path: '/knowledgeq4',
         name: 'Knowledgeq4',
-        component: Knowledgeq4
+        component: Knowledgeq4,
+        meta: {requiresLogin: true},
     },
     {
         path: '/knowledgeq5',
         name: 'Knowledgeq5',
-        component: Knowledgeq5
+        component: Knowledgeq5,
+        meta: {requiresLogin: true},
     },
     {
         path: '/independent',
         name: 'Independent',
-        component: Independent
+        component: Independent,
+        meta: {requiresLogin: true},
     },
     {
         path: '/independentq2',
         name: 'Independentq2',
-        component: Independentq2
+        component: Independentq2,
+        meta: {requiresLogin: true},
     },
     {
         path: '/independentq3',
         name: 'Independentq3',
-        component: Independentq3
+        component: Independentq3,
+        meta: {requiresLogin: true},
     },
     {
         path: '/independentq4',
         name: 'Independentq4',
-        component: Independentq4
+        component: Independentq4,
+        meta: {requiresLogin: true},
     },
     {
         path: '/independentq5',
         name: 'Independentq5',
-        component: Independentq5
+        component: Independentq5,
+        meta: {requiresLogin: true},
     },
     {
         path: '/management',
         name: 'Management',
-        component: Management
+        component: Management,
+        meta: {requiresLogin: true},
     },
     {
         path: '/managementq2',
         name: 'Managementq2',
-        component: Managementq2
+        component: Managementq2,
+        meta: {requiresLogin: true},
     },
     {
         path: '/managementq3',
         name: 'Managementq3',
-        component: Managementq3
+        component: Managementq3,
+        meta: {requiresLogin: true},
     },
     {
         path: '/managementq4',
         name: 'Managementq4',
-        component: Managementq4
+        component: Managementq4,
+        meta: {requiresLogin: true},
     },
     {
         path: '/managementq5',
         name: 'Managementq5',
-        component: Managementq5
+        component: Managementq5,
+        meta: {requiresLogin: true},
     },
     {
         path: '/comments',
         name: 'Comments',
-        component: Comments
+        component: Comments,
+        meta: {requiresLogin: true},
 
     },
     {
         path: '/review',
         name: 'Review',
-        component: Review
+        component: Review,
+        meta: {requiresLogin: true},
     },
     {
         path: '/qcereportiaas',
         name: 'QCEReportiaas',
-        component: QCEReportiaas
+        component: QCEReportiaas,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/qcereportic',
         name: 'QCEReportic',
-        component: QCEReportic
+        component: QCEReportic,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/qcereportited',
         name: 'QCEReportited',
-        component: QCEReportited
+        component: QCEReportited,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/qcereportilegg',
         name: 'QCEReportilegg',
-        component: QCEReportilegg
+        component: QCEReportilegg,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/qcereportiads',
         name: 'QCEReportiads',
-        component: QCEReportiads
+        component: QCEReportiads,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/facultyreportiaas',
         name: 'FacultyReportiaas',
-        component: FacultyReportiaas
+        component: FacultyReportiaas,
+        meta: {requiresLogin: true},
     }, 
   
     {
         path: '/facultyreportilegg',
         name: 'FacultyReportilegg',
-        component: FacultyReportilegg
+        component: FacultyReportilegg,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/facultyreportic',
         name: 'FacultyReportic',
-        component: FacultyReportic
+        component: FacultyReportic,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/facultyreportited',
         name: 'FacultyReportited',
-        component: FacultyReportited
+        component: FacultyReportited,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/facultyreportiads',
         name: 'FacultyReportiads',
-        component: FacultyReportiads
+        component: FacultyReportiads,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/pdfreport',
         name: 'Pdfreport',
-        component: Pdfreport
+        component: Pdfreport,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/printreport',
         name: 'Printreport',
-        component: Printreport
+        component: Printreport,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/choose',
         name: 'Choose',
-        component: Choose
+        component: Choose,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/quiz',
         name: 'Quiz',
-        component: Quiz
+        component: Quiz,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/history',
         name: 'History',
-        component: History
+        component: History,
+        meta: {requiresLogin: true},
     }, 
     {
         path: '/view-evaluation',
         name: 'ViewEvaluation',
-        component: ViewEvaluation
+        component: ViewEvaluation,
+        meta: {requiresLogin: true},
     },
     {
         path: '/view-evaluation-manager',
         name: 'ViewEvaluationManager',
-        component: ViewEvaluationManager
+        component: ViewEvaluationManager,
+        meta: {requiresLogin: true},
     },
     {
         path: '/login',
         name: 'Login',
         component: Login,
-        meta: {
-            alreadyAuth: true
-          }
+        meta: {requiresVisitor: true},
     },
     {
         path: '/rating-period/create',
         name: 'CreateRating',
         component: CreateRating,
+        meta: {requiresLogin: true},
     },
     {
         path: '/rating-period',
         name: 'RatingPeriod',
         component: RatingPeriod,
+        meta: {requiresLogin: true},
     },
     {
         path: '/rating-period/edit',
         name: 'EditRating',
         component: EditRating,
+        meta: {requiresLogin: true},
     },
     {
         path: '/users',
         name: 'User',
         component: User,
+        meta: {requiresLogin: true},
     },
     {
         path: '/user/create',
         name: 'CreateUser',
         component: CreateUser,
+        meta: {requiresLogin: true},
     },,
     {
         path: '/user/edit',
         name: 'EditUser',
         component: EditUser,
+        meta: {requiresLogin: true},
     },
 
 ]
@@ -325,33 +373,75 @@ const router = createRouter({
     history:createWebHistory(),
     routes
 })
-// const router = createRouter({
-//     history: createWebHistory(process.env.BASE_URL),
-//     routes
-//   })
-  
-//   router.beforeEach((to, from, next) => {
-//   })
+
+
 router.beforeEach((to, from, next) => {
-  next()
-    let user = store.state.user;
-    // let user = "haha";
-    
-    if (to.matched.some(rec => rec.meta.alreadyAuth)) {
-        if (user) {
-            if (user.role == "Student") {
-                // import.meta.env.VITE_VUE_APP_BASE_URL
-                next({
-                    path: '/'
-                })
-            }
+    console.log(to);
+    console.log(from);
+    let user =localStorage.getItem('access_token');
+    console.log(user)
+     console.log(store.state.user)
+    // console.log(store.state.user)
+    // console.log(record.meta.requiresAuth)
+    // if (to.matched.some(record => record.meta.requiresAuth)){
+    //     if(routerAuthCheck){
+    //         next();
+    //     }
+    //     else{
+    //         next('/')
+    //     }
+    // }
+    // else{
+    //   next();
+    // }
+    // if (to.meta.requiresAuth && !user){
+    //     router.replace({path: '/'});
+    //     return
+    // }
+    if (to.matched.some((record) => record.meta.requiresLogin)) {
+        if (!user) {
+          next({ path: "/login" });
         } 
-    } else if(!user){
-        next({
-            path: '/login'
-        });
-    }
-})
+        else {
+          next();
+        }
+      } 
+      // if user is logged in and go to log in page redirect them to home page
+      else if (to.matched.some(record => record.meta.requiresVisitor)) {
+        if (user) {
+          next({ path: '/'});
+        }
+        else {
+          next();
+        }
+      }
+      // 
+      else {
+        next();
+      }
+    
+  });
+
+// router.beforeEach((to, from, next) => {
+//   next()
+//     let user = store.state.user;
+//     // let user = "haha";
+    
+//     if (to.matched.some(rec => rec.meta.alreadyAuth)) {
+//         if (user) {
+//             if (user.role == "Student") {
+//                 // import.meta.env.VITE_VUE_APP_BASE_URL
+//                 next({
+//                     path: '/'
+//                 })
+//             }
+//         } 
+//     } else if(!user){
+//         next({
+//             path: '/login'
+//         });
+//     }
+// })
 //     // if (to.matched.some(rec => rec.meta.alreadyAuth)) {
 //     //     if (user) {
 //     //         if (usertype.id == 1){

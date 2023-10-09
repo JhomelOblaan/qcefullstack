@@ -8,16 +8,25 @@ export const encryptStorage = new EncryptStorage(toString(import.meta.env.VITE_V
 
 export default createStore({
   state: {
-     user: null,
+     user: {},
   },
   getters: {
   },
   mutations: {
+    SET_USER_DATA(state, user) {
+      state.user = user;
+      state.isAuthenticated = true;
+      state.loadingUser = false;
+      state.error = {};
+    },
       UPDATE_USER(state, payload){
         state.user = payload
       }
   },
   actions: {
+    SET_USER(context, payload){
+      context.commit("SET_USER_DATA", payload)
+  }
   },
   modules: {
   },

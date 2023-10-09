@@ -1,6 +1,6 @@
 
 <template>
-<div class=" bg-gray-100 ">
+<div >
  <Nav/>
     <Sidebar/>
     <router-view/>
@@ -8,7 +8,6 @@
    
 </template>
 <script setup>
-import axios from 'axios'
 import Nav from './pages/navigation/qce_nav.vue'
 // export default {
  
