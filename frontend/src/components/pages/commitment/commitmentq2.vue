@@ -37,10 +37,10 @@
             </div>
         -->
             
-          <div class="next">
-            <!-- <a href="/Commitmentq3"><button class=" btn button-next ">Next</button></a>  -->
-            <button class=" btn button-next " @click="submitForm">Next</button> 
-          </div>
+        <div class="flex justify-between ml-4 mr-4">
+        <div><a href="/commitment"><button class=" btn button-next " >Preview</button></a> </div>
+        <div> <button class=" btn button-next " @click="submitForm">Next</button> </div>
+        </div>
         </div>
     </div>
     

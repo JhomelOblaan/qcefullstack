@@ -32,9 +32,10 @@
             <a href="/Independentq2"><button class=" btn button-next ">Preview</button></a> 
         </div>
             -->
-          <div class="next">
-            <button class=" btn button-next " @click="submitForm">Next</button> 
-          </div>
+            <div class="flex justify-between ml-4 mr-4">
+        <div><a href="/independentq2"><button class=" btn button-next " >Preview</button></a> </div>
+        <div> <button class=" btn button-next " @click="submitForm">Next</button> </div>
+        </div>
         </div>
       </div>
       

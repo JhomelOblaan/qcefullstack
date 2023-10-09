@@ -1,6 +1,6 @@
 <template>
     <div
-      class="sidebar ml-2"
+      class="sidebar border"
       :class="isOpened ? 'open' : ''"
       :style="cssVars"
     >

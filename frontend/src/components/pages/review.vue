@@ -120,10 +120,10 @@
         <textarea v-model="comment" class="border rounded-sm" >
 
         </textarea> 
-          <div class="next">
-            <button class=" btn button-next " @click="submitCommentForm">Submit</button>
-
-          </div>
+        <div class="flex justify-between ml-4 mr-4">
+        <div><a href="/Comments"><button class=" btn button-next " >Preview</button></a> </div>
+        <div> <button class=" btn button-next " @click="submitForm">Next</button> </div>
+        </div>
       </div>
       
   </div></div>

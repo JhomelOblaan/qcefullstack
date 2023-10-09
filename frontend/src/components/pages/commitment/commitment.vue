@@ -29,8 +29,11 @@
         </div>
       
       </div> 
-        <div class="next">
-         <button class=" btn button-next " @click="submitForm">Next</button> 
+      
+        <div class="flex justify-between ml-4 mr-4">
+          <div><a href="/"><button class=" btn button-next " >Preview</button></a> </div>
+         
+        <div> <button class=" btn button-next " @click="submitForm">Next</button> </div>
         </div>
         </div>
     
