@@ -20,7 +20,7 @@ import { OverallreportModule } from './pdfgen/overallreport/overallreport.module
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: '',
+      password: 'root',
       database: 'qce',
       entities: ['dist/**/entities/*.entity{.ts,.js}'],
       synchronize: true,

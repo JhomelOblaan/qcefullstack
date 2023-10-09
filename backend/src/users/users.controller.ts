@@ -51,4 +51,9 @@ export class UsersController {
   getByEmail(@Param('email') email: string) {
     return this.usersService.getByEmail(email);
   }
+
+  @Post('google/signUp')
+  googleSignUp(@Body() createAuthDto: CreateUserDto) {
+    return this.usersService.signinLocal(createAuthDto);
+  }
 }

@@ -16,10 +16,12 @@ export class User {
   username: string;
   @Column()
   email: string;
-  @Column()
+  @Column({nullable: true})
   password: string;
   @Column({ default: "Student" })
   role: string;
+  @Column({ default: 'default.png' })
+  picture: string;
 
   @OneToMany(() => Evaluation, (evaluator) => evaluator.userevaluator)
   evaluators: Evaluation[]

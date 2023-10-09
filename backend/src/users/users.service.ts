@@ -6,6 +6,7 @@ import { Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class UsersService {
@@ -13,7 +14,7 @@ export class UsersService {
       @InjectRepository(User)
       private userRepository: Repository<User>,
       @Inject(ScoresService)
-      private readonly scoreService: ScoresService,
+      private readonly scoreService: ScoresService,private jwtServices: JwtService
      
       
       // @InjectRepository(Score)
@@ -25,6 +26,36 @@ export class UsersService {
     // @InjectRepository(UsersRoles)
     // private usersRolesRepository: Repository<UsersRoles>,
 
+    async signinLocal(createAuthDto:CreateUserDto,): Promise<any>{
+      console.log(createAuthDto.email)
+    
+      const existingUser = await this.userRepository.findOneBy({
+        email: createAuthDto.email,
+      });
+    
+       console.log(existingUser)
+       if(existingUser){
+        const payload = { sub: existingUser.id, email: existingUser.email};
+          // console.log(this.jwtServices.signAsync(payload))
+        return {
+          access_token: await this.jwtServices.signAsync(payload),
+          user: existingUser,
+          };
+       }
+     if(existingUser === null){
+          const usersave =  this.userRepository.create(createAuthDto);
+          return  this.userRepository.save(usersave);
+     }
+    
+      // if(existingUser){
+      //   const payload = { sub: existingUser.id, email: existingUser.email};
+      //       //  console.log(payload)
+      //       return {
+      //         access_token: await this.jwtServices.signAsync(payload),
+      //         };
+      // }
+    
+    }
 
   create(createUserDto: CreateUserDto) {
     return this.userRepository.save(createUserDto);
