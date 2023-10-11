@@ -1,9 +1,10 @@
 <template>
-    <div class="">
-        <div class="flex justify-center">
+    <div class="flex justify-center ">
+    <div class=" w-5/12 bg-green-100 mt-20 border shadow-lg">
+        <div class="flex justify-center mb-2 bg-green-200">
         <p class="text-lg font-semibold">Login</p>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center ">
         <form v-on:submit.prevent>
             <div>
                 <input type="text" v-model="email" placeholder="Enter Email" class="border mb-2 px-12 py-1"/><br/>
@@ -17,12 +18,10 @@
                <div id="googleSignInBtn" class="g_id_signin" style="margin-top: 1rem; margin-left: .3rem; padding: 1rem;"></div> 
             </div>
            
- </form>    
+        </form>    
         </div>
-    <!--
-
-    -->
     </div>
+</div>
 </template>
 <style>
     .google_g{
@@ -54,6 +53,7 @@ export default {
           console.log(data);
           let result = axios.post(import.meta.env.VITE_VUE_APP_BASE_URL + '/auth/login', data).then(res => {
             localStorage.setItem("user",res.data.payload)
+            localStorage.setItem("access_token", res.data.access_token)
             this.$store.commit('UPDATE_USER', res.data.user)
             window.location.href = window.location.origin;
 

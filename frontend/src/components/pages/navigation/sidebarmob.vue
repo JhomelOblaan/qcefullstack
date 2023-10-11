@@ -81,7 +81,7 @@
             </li>
                -->
             <li id="dropdown"  class="flex"  v-if="isEvaluator" 
-            ><a v-if="isEvaluator" href="/">
+            ><a v-if="isOpened" href="/">
               <Icon :name="'grid-alt'" class="bx"/>
             <span class="links_name"><p>Dashboard</p></span>
             </a >
@@ -321,7 +321,7 @@
         //! Styles
         bgColor: {
           type: String,
-          default: '#FFFFFF',
+          default: '#1F9D1C',
         },
         secondaryColor: {
           type: String,
@@ -353,7 +353,7 @@
         },
         menuItemsTextColor: {
           type: String,
-          default: '#1d1b31',
+          default: '#fff',
         },
         menuFooterTextColor: {
           type: String,
@@ -505,7 +505,7 @@
       transition: all 0.5s ease;
     }
     .sidebar.open {
-      width: 250px;
+      width: 255px;
     }
     .sidebar .logo-details {
       height: 60px;
