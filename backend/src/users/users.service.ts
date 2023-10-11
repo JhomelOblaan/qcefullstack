@@ -47,13 +47,14 @@ export class UsersService {
           return  this.userRepository.save(usersave);
      }
     
-      // if(existingUser){
-      //   const payload = { sub: existingUser.id, email: existingUser.email};
-      //       //  console.log(payload)
-      //       return {
-      //         access_token: await this.jwtServices.signAsync(payload),
-      //         };
-      // }
+      if(existingUser){
+        const payload = { sub: existingUser.id, email: existingUser.email};
+            //  console.log(payload)
+            return {
+              access_token: await this.jwtServices.signAsync(payload),
+              user: existingUser,
+              };
+      }
     
     }
 
