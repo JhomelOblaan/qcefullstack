@@ -52,6 +52,7 @@ import EditRating from '../components/pages/RatingPeriod/edit.vue'
 import User from '../components/pages/user/index.vue'
 import CreateUser from '../components/pages/user/create.vue'
 import EditUser from '../components/pages/user/edit.vue'
+import UserRev from '../components/pages/userReview.vue'
 
 
 const routes =[
@@ -364,6 +365,12 @@ const routes =[
         path: '/user/edit',
         name: 'EditUser',
         component: EditUser,
+        meta: {requiresLogin: true},
+    },
+    {
+        path: '/UserRev',
+        name: 'UserRev',
+        component: UserRev,
         meta: {requiresLogin: true},
     },
 

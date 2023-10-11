@@ -1,6 +1,6 @@
 <template>
  <div class="sticky top-0 bg-[#FFFFFF] z-40">
-    <div class="flex justify-between shadow-md">
+    <div v-if="logedProfile"  class="flex justify-between shadow-md">
         <div class="mx-5">
           <!--   <nav class="flex justify-left space-x-10 main-nav ">
             <img alt="Vue logo" class="logo ml-8" src="../../assets/pix/SummerLms.gif" width="125" height="" />
@@ -11,8 +11,10 @@
         <p class="font-bold text-lg mt-1 mb-1">QCE FACULTY EVALUATION</p>
         <p class="text-sm text-slate-500 mt-1 mb-1">A.Y. 2022-2023 2nd Semester</p>
         </div>
-        <div class="flex mr-4 z-index-1">
-            <select class=" rouded-lg">
+        <img v-if="user_profile" :src="user_profile" alt="user" width="50px" height="">
+        <div class="flex mr-4 z-index-1 hidden">
+          
+            <select class=" rouded-lg ">
                 <option></option>
                 <option>Setting</option>
                 <option>Profile</option>
@@ -35,8 +37,23 @@
 <style> 
 
 </style>
-<script setup>
-    import {ref} from 'vue'
-
-    const color =ref('red')
+<script>
+  export default{
+    data(){
+      return{
+        user_profile:'',
+        user_name:''
+      }
+    },
+    methods:{
+      async logedProfile(){
+        let user = store.state.user
+        // console.log(user)
+        if(user){
+          this.user_profile = user.picture
+        }
+        
+      }
+    }
+  }
 </script>

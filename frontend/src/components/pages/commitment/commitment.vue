@@ -6,7 +6,6 @@
     <div class="steps-container">
       <Steppercom />
       <Stepperq1 />
-
   </div>
   </div>
   <div>

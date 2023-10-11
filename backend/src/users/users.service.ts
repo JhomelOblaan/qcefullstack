@@ -27,7 +27,7 @@ export class UsersService {
     // private usersRolesRepository: Repository<UsersRoles>,
 
     async signinLocal(createAuthDto:CreateUserDto,): Promise<any>{
-      console.log(createAuthDto.email)
+      // console.log(createAuthDto.email)
     
       const existingUser = await this.userRepository.findOneBy({
         email: createAuthDto.email,
@@ -46,15 +46,17 @@ export class UsersService {
           const usersave =  this.userRepository.create(createAuthDto);
           return  this.userRepository.save(usersave);
      }
+     
+     return this.signinLocal
     
-      if(existingUser){
-        const payload = { sub: existingUser.id, email: existingUser.email};
-            //  console.log(payload)
-            return {
-              access_token: await this.jwtServices.signAsync(payload),
-              user: existingUser,
-              };
-      }
+      // if(existingUser){
+      //   const payload = { sub: existingUser.id, email: existingUser.email};
+      //       //  console.log(payload)
+      //       return {
+      //         access_token: await this.jwtServices.signAsync(payload),
+      //         user: existingUser,
+      //         };
+      // }
     
     }
 
